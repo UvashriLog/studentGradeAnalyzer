@@ -50,9 +50,9 @@ def generate_report(classified, passing_avg=70):
 # ===== Main Block =====
 if __name__ == "__main__":
     students = {
-        "Alice": [85, 90, 78, 92],   # 86.25 → B
-        "Bob": [70, 75, 65, 80],     # 72.5  → C
-        "Clara": [95, 98, 94, 98]    # 96.25 → A
+        "Alice": [85, 90, 78, 92],   
+        "Bob": [70, 75, 65, 80],     
+        "Clara": [95, 98, 94, 98]    
     }
 
     averages = process_scores(students)
