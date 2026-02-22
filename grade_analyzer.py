@@ -7,18 +7,14 @@ def process_scores(students):
 
 
 def classify_grades(averages):
-    # Grading thresholds (local variables)
-    A_threshold = 90
-    B_threshold = 75
-    C_threshold = 60
-
     classified = {}
+
     for name, avg in averages.items():
-        if avg >= A_threshold:
+        if avg >= 90:
             grade = "A"
-        elif avg >= B_threshold:
+        elif 75 <= avg <= 89:
             grade = "B"
-        elif avg >= C_threshold:
+        elif 60 <= avg <= 74:
             grade = "C"
         else:
             grade = "F"
@@ -54,9 +50,9 @@ def generate_report(classified, passing_avg=70):
 # ===== Main Block =====
 if __name__ == "__main__":
     students = {
-        "Alice": [85, 90, 78, 92],
-        "Bob": [70, 75, 65, 80],      # Adjusted scores (now passes)
-        "Clara": [95, 98, 94, 98]
+        "Alice": [85, 90, 78, 92],   # 86.25 → B
+        "Bob": [70, 75, 65, 80],     # 72.5  → C
+        "Clara": [95, 98, 94, 98]    # 96.25 → A
     }
 
     averages = process_scores(students)
